@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dys4jshh7o3fj"]
+
+[ext_resource type="Script" path="res://walker.gd" id="1_7gwjq"]
+[ext_resource type="Texture2D" uid="uid://dnvgeaiva5op4" path="res://icon.svg" id="2_fsahm"]
+
+[node name="Walker" type="Node2D"]
+script = ExtResource("1_7gwjq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_fsahm")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://1e1kehr8ko4h"]
+
+[ext_resource type="Texture2D" uid="uid://dnvgeaiva5op4" path="res://icon.svg" id="1_6auqb"]
+[ext_resource type="Script" path="res://excersie0.1/walker_down_right_bias.gd" id="1_7aadd"]
+
+[node name="WalkerDownRightBias" type="Node2D"]
+script = ExtResource("1_7aadd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_6auqb")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -72.0
+offset_top = -64.0
+offset_right = 78.0
+offset_bottom = -41.0
+pivot_offset = Vector2(72, 0)
+text = "Walker(RightDown)"

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://clcdnlqn8teoi"]
+
+[ext_resource type="PackedScene" uid="uid://csq4slud83ob" path="res://exercise0.4/dot.tscn" id="1_kshm4"]
+[ext_resource type="Script" path="res://exercise0.4/paint_splatter.gd" id="1_tqhfd"]
+
+[node name="PaintSplatter" type="Node2D"]
+script = ExtResource("1_tqhfd")
+
+[node name="Dot" parent="." instance=ExtResource("1_kshm4")]

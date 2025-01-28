@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://byt3cglerwa00"]
+
+[ext_resource type="PackedScene" uid="uid://dys4jshh7o3fj" path="res://walker.tscn" id="1_54hcp"]
+[ext_resource type="PackedScene" uid="uid://1e1kehr8ko4h" path="res://excersie0.1/walker_down_right_bias.tscn" id="2_a3soa"]
+[ext_resource type="PackedScene" uid="uid://ctu73rf5xe3or" path="res://exercise0.3/walker_mouse_follow.tscn" id="3_4foiy"]
+
+[node name="World" type="Node2D"]
+
+[node name="Walker" parent="." instance=ExtResource("1_54hcp")]
+position = Vector2(576, 320)
+
+[node name="WalkerDownRightBias" parent="." instance=ExtResource("2_a3soa")]
+position = Vector2(292, 323)
+
+[node name="WalkerMouseFollow" parent="." instance=ExtResource("3_4foiy")]
+position = Vector2(423, 483)
