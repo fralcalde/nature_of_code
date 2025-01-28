@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var stepx: int = randi_range(-1, 1)
 	var stepy: int = randi_range(-1, 1)
 	var step: Vector2 = Vector2(stepx, stepy)
