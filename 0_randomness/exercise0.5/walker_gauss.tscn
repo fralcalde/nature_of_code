@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://drkvdjvmbj26x"]
+
+[ext_resource type="Script" path="res://exercise0.5/walker_gauss.gd" id="1_j45xe"]
+[ext_resource type="Texture2D" uid="uid://dnvgeaiva5op4" path="res://icon.svg" id="2_hwi2y"]
+
+[node name="WalkerGauss" type="Node2D"]
+script = ExtResource("1_j45xe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_hwi2y")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -55.0
+offset_top = -57.0
+offset_right = 56.0
+offset_bottom = -34.0
+text = "Walker(Gauss)
+"
