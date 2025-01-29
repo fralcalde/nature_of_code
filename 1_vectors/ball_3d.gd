@@ -14,6 +14,7 @@ func _ready() -> void:
 	velocity.y = randf_range(-1, 1)
 	velocity.z = randf_range(-1, 1)
 	velocity = velocity.normalized()
+	print("Initial velocity: ", velocity * speed)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
