@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://byt3cglerwa00"]
+[gd_scene load_steps=7 format=3 uid="uid://byt3cglerwa00"]
 
 [ext_resource type="PackedScene" uid="uid://dys4jshh7o3fj" path="res://walker.tscn" id="1_54hcp"]
 [ext_resource type="PackedScene" uid="uid://1e1kehr8ko4h" path="res://excersie0.1/walker_down_right_bias.tscn" id="2_a3soa"]
 [ext_resource type="PackedScene" uid="uid://ctu73rf5xe3or" path="res://exercise0.3/walker_mouse_follow.tscn" id="3_4foiy"]
 [ext_resource type="PackedScene" uid="uid://drkvdjvmbj26x" path="res://exercise0.5/walker_gauss.tscn" id="4_jwkve"]
 [ext_resource type="PackedScene" uid="uid://cexrlh2fgjxcm" path="res://exercise0.6/walker_levy_flight.tscn" id="5_svm6t"]
+[ext_resource type="PackedScene" uid="uid://bq53d5lijrm5t" path="res://exercise0.7/walker_perlin.tscn" id="6_qgel1"]
 
 [node name="World" type="Node2D"]
 
@@ -22,3 +23,6 @@ position = Vector2(852, 404)
 
 [node name="Walker(LevyFlight)" parent="." instance=ExtResource("5_svm6t")]
 position = Vector2(587, 189)
+
+[node name="Walker(Perlin)" parent="." instance=ExtResource("6_qgel1")]
+position = Vector2(821, 233)

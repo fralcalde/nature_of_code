@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxu20t5wdipg5"]
+
+[ext_resource type="Script" path="res://exercise0.8/exercise_0_8.gd" id="1_xsk41"]
+
+[node name="Canvas" type="Node2D"]
+script = ExtResource("1_xsk41")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+centered = false

@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://bxxqd3uevjtap"]
+
+[ext_resource type="Script" path="res://exercise0.10/exercise_010.gd" id="1_c0xba"]
+[ext_resource type="Shader" path="res://exercise0.10/exercise_010.gdshader" id="2_bli2a"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g5xws"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_012b1"]
+sky_material = SubResource("ProceduralSkyMaterial_g5xws")
+
+[sub_resource type="Environment" id="Environment_fqns4"]
+background_mode = 2
+sky = SubResource("Sky_012b1")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ant78"]
+noise_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_u2wp1"]
+in_3d_space = true
+normalize = false
+noise = SubResource("FastNoiseLite_ant78")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x7wb2"]
+render_priority = 0
+shader = ExtResource("2_bli2a")
+shader_parameter/height_scale = 0.5
+shader_parameter/noise = SubResource("NoiseTexture2D_u2wp1")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4fblc"]
+material = SubResource("ShaderMaterial_x7wb2")
+subdivide_width = 32
+subdivide_depth = 32
+
+[node name="Exercise010" type="Node3D"]
+script = ExtResource("1_c0xba")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fqns4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.874999, 0.0290022, 0.483255, 0.216504, 0.916266, 0.337021, -0.433016, 0.39952, -0.808011, 0, 6, 0)
+light_color = Color(0.937255, 0.921569, 0.427451, 1)
+light_energy = 0.2
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_4fblc")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-3.78552e-08, -0.5, 0.866025, -2.18557e-08, 0.866025, 0.5, -1, -1.77636e-15, -4.37114e-08, 3, 2, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.279487, 0)
