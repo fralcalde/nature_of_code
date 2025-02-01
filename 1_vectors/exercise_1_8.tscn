@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://6srpxwux4r43"]
+
+[ext_resource type="PackedScene" uid="uid://hg6ihvuvosa0" path="res://mover_planet.tscn" id="1_e7j80"]
+
+[node name="Exercise1_8" type="Node2D"]
+
+[node name="MoverPlanet" parent="." instance=ExtResource("1_e7j80")]
+position = Vector2(370, 239)

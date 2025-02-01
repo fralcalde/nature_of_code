@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://hg6ihvuvosa0"]
+
+[ext_resource type="Script" path="res://mover_planet.gd" id="1_db6l8"]
+[ext_resource type="Texture2D" uid="uid://dfcyto8gblthl" path="res://icon.svg" id="1_h2ben"]
+
+[node name="MoverPlanet" type="Node2D"]
+script = ExtResource("1_db6l8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_h2ben")
