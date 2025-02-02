@@ -28,11 +28,11 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 18, 19)
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 22, 23)
 script = ExtResource("2_kbu6k")
 
 [node name="Planet" parent="." instance=ExtResource("1_hd0xj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.31352, 0, -9.09999)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.36232, 0, -19.9145)
 mass = 100
 
 [node name="Planet2" parent="." instance=ExtResource("1_hd0xj")]
@@ -40,9 +40,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.54976, 0, 2.47881)
 mass = 25
 
 [node name="Planet3" parent="." instance=ExtResource("1_hd0xj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25792, 0, -0.236177)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.78865, 0, -0.236177)
 mass = 5
 
 [node name="Planet4" parent="." instance=ExtResource("1_hd0xj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, 0, -8.17978)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.31437, 0, -15.8633)
 mass = 1
