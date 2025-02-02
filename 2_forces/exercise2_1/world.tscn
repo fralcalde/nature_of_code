@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dslilpp0kbtlb"]
+
+[ext_resource type="PackedScene" uid="uid://dejb6df5kh6ye" path="res://exercise2_1/mover.tscn" id="1_ffn5v"]
+
+[node name="World" type="Node2D"]
+
+[node name="Mover" parent="." instance=ExtResource("1_ffn5v")]
+position = Vector2(239, 629)

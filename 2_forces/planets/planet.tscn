@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bahnysgxawgj7"]
+
+[ext_resource type="Script" path="res://planets/planet.gd" id="1_brk8f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mteya"]
+albedo_color = Color(0.360401, 0.71341, 0.370113, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_l54f8"]
+material = SubResource("StandardMaterial3D_mteya")
+radius = 2.28539
+height = 4.57078
+
+[node name="Planet" type="Node3D"]
+script = ExtResource("1_brk8f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_l54f8")
