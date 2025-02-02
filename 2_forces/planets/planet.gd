@@ -6,12 +6,13 @@ extends Node3D
 var velocity: Vector3 = Vector3.ZERO
 var acceleration: Vector3 = Vector3.ZERO
 @export var mass: int = 10 : set=set_mass
+var mat: StandardMaterial3D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$MeshInstance3D.mesh = SphereMesh.new()
-	var mat: StandardMaterial3D = StandardMaterial3D.new()
+	mat = StandardMaterial3D.new()
 	mat.set("albedo_color", Color(randf(), randf(), randf()))
 	$MeshInstance3D.mesh.material = mat
 	set_mass(mass)
@@ -57,7 +58,8 @@ func set_mass(m: int) -> void:
 
 func draw_trail(pos1: Vector3, pos0: Vector3) -> void:
 	var mesh: ImmediateMesh = ImmediateMesh.new()
-	mesh.surface_begin(Mesh.PRIMITIVE_LINES)
+	mesh.surface_begin(Mesh.PRIMITIVE_LINES, mat)
+
 
 	# Start line
 	mesh.surface_set_normal(Vector3(0, 0, 1))
@@ -70,6 +72,7 @@ func draw_trail(pos1: Vector3, pos0: Vector3) -> void:
 	mesh.surface_add_vertex(pos1)
 
 	mesh.surface_end()
+
 
 	var mesh_node: MeshInstance3D = MeshInstance3D.new()
 	mesh_node.mesh = mesh
