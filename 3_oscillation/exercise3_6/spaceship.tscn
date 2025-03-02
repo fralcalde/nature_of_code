@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bchkp1mhhu8lv"]
+
+[ext_resource type="Script" path="res://exercise3_6/spaceship.gd" id="1_ssj24"]
+
+[node name="Spaceship" type="Node2D"]
+script = ExtResource("1_ssj24")
+
+[node name="Sprite" type="Node2D" parent="."]
+position = Vector2(12, 0)
+rotation = 1.5708
+
+[node name="Body" type="Polygon2D" parent="Sprite"]
+polygon = PackedVector2Array(0, 0, -10, 20, 10, 20)
+
+[node name="Thruster1" type="Polygon2D" parent="Sprite"]
+position = Vector2(-7, 20)
+polygon = PackedVector2Array(-2, 0, -2, 2, 2, 2, 2, 0)
+
+[node name="Thruster2" type="Polygon2D" parent="Sprite"]
+position = Vector2(7, 20)
+polygon = PackedVector2Array(-2, 0, -2, 2, 2, 2, 2, 0)

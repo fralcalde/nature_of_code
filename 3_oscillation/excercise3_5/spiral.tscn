@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvotfys8gq7p1"]
+
+[ext_resource type="Script" path="res://excercise3_5/spiral.gd" id="1_cigjq"]
+
+[node name="Spiral" type="Node2D"]
+script = ExtResource("1_cigjq")
+
+[node name="Line" type="Line2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Spiral"

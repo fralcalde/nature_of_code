@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://boc1f5p5725oe"]
+
+[ext_resource type="PackedScene" uid="uid://cvotfys8gq7p1" path="res://excercise3_5/spiral.tscn" id="1_o0key"]
+
+[node name="Canvas" type="Node2D"]
+
+[node name="Spiral" parent="." instance=ExtResource("1_o0key")]
+position = Vector2(530, 284)
+max_angle = 50.0
+angle_step = 0.25

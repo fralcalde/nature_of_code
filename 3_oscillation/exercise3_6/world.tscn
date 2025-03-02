@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsh2cl5reydyh"]
+
+[ext_resource type="PackedScene" uid="uid://bchkp1mhhu8lv" path="res://exercise3_6/spaceship.tscn" id="1_isikt"]
+
+[node name="World" type="Node2D"]
+
+[node name="Spaceship" parent="." instance=ExtResource("1_isikt")]
+position = Vector2(572, 304)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://deuh3odkmfmag"]
+
+[ext_resource type="PackedScene" uid="uid://buq2e5uqw1wsj" path="res://excercise3_4/vehicle.tscn" id="1_akvsb"]
+
+[node name="World" type="Node2D"]
+
+[node name="Vehicle" parent="." instance=ExtResource("1_akvsb")]
+position = Vector2(253, 232)
